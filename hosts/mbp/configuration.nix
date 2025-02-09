@@ -26,6 +26,15 @@
     # $ darwin-rebuild changelog
     system.stateVersion = 6;
 
+    system.defaults = {
+        screencapture = {
+            location = "~/Downloads";
+            show-thumbnail = true;
+            type = "png";
+            target = "file";
+        };
+    };
+
     # The platform the configuration will be used on.
     nixpkgs.hostPlatform = "aarch64-darwin";
 
