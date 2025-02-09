@@ -4,9 +4,7 @@ Install nix
 
 `nix flake update`
 
-
-`darwin-rebuild switch --flake ~/nix#Christians-MacBook-Pro`
-
+`darwin-rebuild switch --flake ~/nix#mbp`
 
 To install home-manager
 
