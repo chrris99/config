@@ -29,6 +29,8 @@
         modules = [
           ./hosts/mbp/configuration.nix
           home-manager.darwinModules.home-manager {
+            nixpkgs = nixpkgsConfig;
+
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.christianconforti = import ./home/home.nix;
