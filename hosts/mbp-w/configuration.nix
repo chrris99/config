@@ -1,12 +1,22 @@
 { pkgs, ... }: 
 
+let 
+    vars = {
+        defaultbrowser = "chrome";
+    };
+in 
 {
+    environment.systemPackages = [
+        pkgs.defaultbrowser
+    ];
+
     users.users.christianconforti.home = "/Users/christianconforti";
 
     homebrew = {
         enable = true;
         casks = [
             "1password-cli"
+            "google-chrome"
         ];
 
         onActivation.cleanup = "zap";
@@ -29,6 +39,10 @@
             target = "file";
         };
     };
+
+    system.activationScripts = (if (vars ? "defaultbrowser" && builtins.isString vars.defaultbrowser) then {
+        postUserActivation.text = "defaultbrowser ${vars.defaultbrowser}";
+    } else { });
 
     # The platform the configuration will be used on.
     nixpkgs.hostPlatform = "aarch64-darwin";
