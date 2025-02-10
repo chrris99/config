@@ -11,7 +11,8 @@
     homebrew = {
         enable = true;
         casks = [
-          "firefox"
+            "1password"
+            "1password-cli"
         ];
 
         onActivation.cleanup = "zap";
