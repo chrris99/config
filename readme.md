@@ -2,10 +2,14 @@ Install nix
 
 `sh <(curl -L https://nixos.org/nix/install)`
 
+Install nix-darewin
+
+`nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake .#{configuration}`
+
+Upate flake
+
 `nix flake update`
 
-`darwin-rebuild switch --flake ~/nix#mbp`
+Build configuration
 
-To install home-manager
-
-`nix run home-manager/master -- init --switch`
+`darwin-rebuild switch --flake ~/nix#{configuration}`
