@@ -11,7 +11,7 @@ _:
     ./vscode.nix
   ];
 
-  programs.git.extraConfig.user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHQ/RcIdnaWlO/CqqVqCnT1KfQByJFXMgbOZz99QnSxx";
+  programs.git.extraConfig.user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFiFyUweLkvtaz2ZdXjlAuQw2FfWoUSfhdrljeh8WB3w";
 
   programs.home-manager.enable = true;
 }
