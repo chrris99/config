@@ -8,6 +8,7 @@ in
 {
     environment.systemPackages = [
         pkgs.defaultbrowser
+        pkgs.zoom-us
     ];
 
     users.users.christianconforti.home = "/Users/christianconforti";
@@ -15,9 +16,17 @@ in
     homebrew = {
         enable = true;
         casks = [
+            "1password"
             "1password-cli"
             "google-chrome"
+            "postman"
+            "slack"
+            "pgadmin4"
         ];
+
+        masApps = {
+            Craft = 1487937127;
+        };
 
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;

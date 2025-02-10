@@ -19,8 +19,13 @@ in
         casks = [
             "1password"
             "1password-cli"
-            "google-chrome"
         ];
+
+        masApps = {
+            Craft = 1487937127;
+            "1Password for Safari" = 1569813296;
+        };
+
 
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
