@@ -5,7 +5,10 @@
 
     homebrew = {
         enable = true;
-        casks = [];
+        casks = [
+            "1password"
+            "1password-cli"
+        ];
 
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;

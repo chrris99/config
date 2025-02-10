@@ -12,7 +12,11 @@
         };
 
         extraConfig = {
-        # Sign all commits using ssh key
+            push = {
+                autoSetupRemote = true;
+            };
+
+            # Sign all commits using ssh key
             commit.gpgsign = true;
             gpg.format = "ssh";
             gpg.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";

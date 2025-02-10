@@ -7,7 +7,6 @@
     extensions = with pkgs.vscode-extensions; [
       editorconfig.editorconfig
       bbenoist.nix
-      pkief.material-icon-theme
     ];
 
     userSettings = {

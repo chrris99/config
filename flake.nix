@@ -53,6 +53,13 @@
 
         modules = [
           ./hosts/mbp-w/configuration.nix
+          home-manager.darwinModules.home-manager {
+            nixpkgs = nixpkgsConfig;
+
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.christianconforti = import ./home/work.nix;
+          }
           nix-homebrew.darwinModules.nix-homebrew {
             nix-homebrew = {
               enable = true;
