@@ -45,6 +45,24 @@
           }
         ];
       };
+
+      mbp-w = darwinSystem {
+        system = "aarch64-darwin";
+
+        specialArgs = { inherit inputs; };
+
+        modules = [
+          ./hosts/mbp-w/configuration.nix
+          nix-homebrew.darwinModules.nix-homebrew {
+            nix-homebrew = {
+              enable = true;
+              enableRosetta = true;
+              user = "christianconforti";
+              autoMigrate = true;
+            };
+          }
+        ];
+      };
     };
   };
 }
