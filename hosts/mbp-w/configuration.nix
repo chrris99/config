@@ -8,16 +8,35 @@ in
 {
     environment.systemPackages = [
         pkgs.defaultbrowser
+        pkgs.zoom-us
     ];
 
     users.users.christianconforti.home = "/Users/christianconforti";
 
     homebrew = {
         enable = true;
+
+        brews = [
+            "fastlane"
+            "serverless"
+            "typescript"
+            "nvm"
+        ];
+
         casks = [
+            "1password"
             "1password-cli"
             "google-chrome"
+            "postman"
+            "slack"
+            "pgadmin4"
+            "raycast"
         ];
+
+        masApps = {
+            Craft = 1487937127;
+            Testflight = 899247664;
+        };
 
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
@@ -37,6 +56,25 @@ in
             show-thumbnail = true;
             type = "png";
             target = "file";
+        };
+
+        dock = {
+            persistent-apps = [
+                "/System/Applications/Launchpad.app"
+                "/System/Applications/App Store.app"
+                "/Applications/Google Chrome.app"
+                "/Applications/1Password.app"
+                "/System/Applications/Messages.app"
+                "/System/Applications/Mail.app"
+                "/Applications/zoom.us.app"
+                "/System/Applications/Calendar.app"
+                "/System/Applications/System Settings.app"
+                "/Applications/Slack.app"
+                "/Applications/Postman.app"
+                "/Applications/Craft.app"
+                "/Applications/Linear.app"
+                "/System/Applications/Utilities/Terminal.app"
+            ];
         };
     };
 
