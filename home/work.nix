@@ -1,4 +1,4 @@
-_:
+{ inputs, pkgs, ... }:
 
 {
   home.username = "christianconforti";

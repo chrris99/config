@@ -9,6 +9,7 @@ in
     environment.systemPackages = [
         pkgs.defaultbrowser
         pkgs.zoom-us
+        pkgs.fastlane
     ];
 
     users.users.christianconforti.home = "/Users/christianconforti";
@@ -17,7 +18,7 @@ in
         enable = true;
 
         brews = [
-            "fastlane"
+            "awscli"
             "serverless"
             "typescript"
             "nvm"
